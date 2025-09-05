@@ -9,7 +9,10 @@
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 
-\graphicspath{img}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue
+}
 
 % New column types to use in tabular environment for instruction formats.
 % Allocate 0.18in per bit.
@@ -59,5 +62,5 @@
 \footskip=16pt
 \headsep=20pt
 \lhead{\headerfont RISC-V Reference Card}
-\rhead{\headerfont V1.0}
-\rfoot{\url{github.com/jameszhu/riscv-card} (\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY-4.0})}
+\rhead{\headerfont V1.0 (\href{https://github.com/HElzomor/riscv-card}{FhG IIS Edition})}
+\rfoot{A derivation of the work of \href{https://github.com/jameslzhu/riscv-card}{jameslzhu} (\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY-4.0})}
