@@ -134,8 +134,12 @@ jal      & Jump And Link           & J   & 1101111    &        &        & rd = P
 jalr     & Jump And Link Reg       & I   & 1100111    & 0x0    &        & rd = PC+4; PC = rs1 + imm    & \\ \hline
 lui      & Load Upper Imm          & U   & 0110111    &        &        & rd = imm \verb|<<| 12        & \\
 auipc    & Add Upper Imm to PC     & U   & 0010111    &        &        & rd = PC + (imm \verb|<<| 12) & \\ \hline
+\rowcolor{red}
 ecall    & Environment Call        & I   & 1110011    & 0x0    & imm=0x0 & Context switch to OS       & \\ \hline
+\rowcolor{red}
 ebreak   & Environment Break       & I   & 1110011    & 0x0    & imm=0x1 & Context switch to debugger & \\ \hline
+\rowcolor{red}
 fence    & Memory fence            & FENCE & 0001111  & 0x0    &        & Order mem/io accesses        & \\ \hline
+\multicolumn{8}{r}{\scriptsize *red rows indicate operations not being implemented in the single cycle riscv course}
 
 \end{tabular}
