@@ -1,4 +1,20 @@
-# RISC-V Reference Card
+# Why this fork exists
+
+It adds some modifications to accommodate the needs of the work at FhG IIS.
+
+## Branch main
+
+It remains the same with a correction in the original link repository path and the RV32I registers table alignment.
+
+The full reference card v1.0 can be found [here][pdf_fhg]
+
+## Branch RV32I-Edition
+
+It reduces the card only to the RV32I instructions, pseudo instructions and registers. It also marks out the instructions not being implemented by [Lund University][lund_course] to be used as a reference for students attending the course.
+
+The RV32I reference card v1.0 can be found [here][pdf_fhg_rv32i]
+
+# RISC-V Reference Card (unchanged from the [original repository][original_repo] by jameslzhu)
 
 An unofficial reference sheet for RISC-V, the free and libre instruction set from Berkeley. ([**PDF**][pdf]).
 
@@ -68,12 +84,16 @@ This work is adapted from the RISC-V Instruction Set Manual, available at
 [https://riscv.org/specifications/][RV] and licensed
 under the Creative Commons [CC-BY-4.0][CC] license.
 
-[pdf]: https://github.com/jameslzhu/riscv-card/releases/download/latest/riscv-card.pdf
-[RV]: https://riscv.org/specifications "RISC-V spec"
-[CC]: https://creativecommons.org/licenses/by/4.0/ "CC-BY-4.0"
+[pdf_fhg_rv32i]: https://github.com/HElzomor/riscv-card/releases/download/v1.0_RV32I/riscv-card-rv32i.pdf
+[pdf_fhg]: https://github.com/HElzomor/riscv-card/releases/download/v1.0/riscv-card.pdf
+[pdf]: https://github.com/jameslzhu/riscv-card/releases/download/v1.0/riscv-card.pdf
+[RV]: https://riscv.org/specifications
+[CC]: https://creativecommons.org/licenses/by/4.0/
 [cs61c]: https://cs61c.org/
 [patterson-hennessy]: https://www.elsevier.com/books/catalog/isbn/9780128203316
 [riscv-card]: https://inst.eecs.berkeley.edu/~cs61c/resources/RISCV_Green_Sheet.pdf
 [mips-green-sheet]: https://inst.eecs.berkeley.edu/~cs61c/resources/MIPS_Green_Sheet.pdf
 [latex]: https://www.latex-project.org/get/
 [tectonic]: https://tectonic-typesetting.github.io/en-US/
+[original_repo]: https://github.com/jameslzhu/riscv-card
+[lund_course]: https://github.com/PalePrime/single_cycle
