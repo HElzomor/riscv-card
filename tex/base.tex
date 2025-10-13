@@ -92,7 +92,7 @@
 
 \begin{tabular}
 {T | l | c | T | T | T | T | l} \hline
-\rm Inst & Name                       & FMT   & \rm Opcode & \rm funct3 & \rm funct7                     & \rm Description (C)                                          & Note     \\ \hline
+\rm Inst & Name                       & Type  & \rm Opcode & \rm funct3 & \rm funct7                     & \rm Description (C)                                          & Note     \\ \hline
 add      & ADD                        & R     & 0110011    & 0x0        & 0x00                           & rd = rs1 + rs2                                               &          \\
 sub      & SUB                        & R     & 0110011    & 0x0        & 0x20                           & rd = rs1 - rs2                                               &          \\
 xor      & XOR                        & R     & 0110011    & 0x4        & 0x00                           & rd = rs1 \^{} rs2                                            &          \\
@@ -127,7 +127,7 @@ bge      & Branch $\geq$              & B     & 1100011    & 0x5        &       
 bltu     & Branch < Unsigned          & B     & 1100011    & 0x6        &                                & if(rs1 < \enspace rs2) PC += imm                             &          \\
 bgeu     & Branch $\geq$ Unsigned     & B     & 1100011    & 0x7        &                                & if(rs1 >= rs2) PC += imm                                     &          \\ \hline
 jal      & Jump And Link              & J     & 1101111    &            &                                & rd = PC+4; PC += imm                                         &          \\
-jalr     & Jump And Link Reg          & I     & 1100111    & 0x0        &                                & rd = PC+4; PC = rs1 + imm                                    &          \\ \hline
+jalr     & Jump And Link Reg          & J     & 1100111    & 0x0        &                                & rd = PC+4; PC = rs1 + imm                                    &          \\ \hline
 lui      & Load Upper Imm.            & U     & 0110111    &            &                                & rd = imm \verb|<<| 12                                        & zero-ext \\
 auipc    & Add Upper Imm. to PC       & U     & 0010111    &            &                                & rd = PC + (imm \verb|<<| 12)                                 & zero-ext \\ \hline
 \rowcolor{red}
