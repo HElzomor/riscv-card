@@ -95,19 +95,19 @@
 \rm Inst & Name                       & Type  & \rm Opcode & \rm funct3 & \rm funct7                     & \rm Description (C)                                          & Note     \\ \hline
 add      & ADD                        & R     & 0110011    & 0x0        & 0x00                           & rd = rs1 + rs2                                               &          \\
 sub      & SUB                        & R     & 0110011    & 0x0        & 0x20                           & rd = rs1 - rs2                                               &          \\
-xor      & XOR                        & R     & 0110011    & 0x4        & 0x00                           & rd = rs1 \^{} rs2                                            &          \\
-or       & OR                         & R     & 0110011    & 0x6        & 0x00                           & rd = rs1 | rs2                                               &          \\
-and      & AND                        & R     & 0110011    & 0x7        & 0x00                           & rd = rs1 \& rs2                                              &          \\
-sll      & Shift Left Logical         & R     & 0110011    & 0x1        & 0x00                           & rd = rs1 \verb|<<| [rs2]\textsubscript{[4:0]}                & zero-ext \\
+xor      & XOR                        & R     & 0110011    & 0x4        &                                & rd = rs1 \^{} rs2                                            &          \\
+or       & OR                         & R     & 0110011    & 0x6        &                                & rd = rs1 | rs2                                               &          \\
+and      & AND                        & R     & 0110011    & 0x7        &                                & rd = rs1 \& rs2                                              &          \\
+sll      & Shift Left Logical         & R     & 0110011    & 0x1        &                                & rd = rs1 \verb|<<| [rs2]\textsubscript{[4:0]}                & zero-ext \\
 srl      & Shift Right Logical        & R     & 0110011    & 0x5        & 0x00                           & rd = rs1 \verb|>>| [rs2]\textsubscript{[4:0]}                & zero-ext \\
 sra      & Shift Right Arith          & R     & 0110011    & 0x5        & 0x20                           & rd = rs1 \verb|>>>| [rs2]\textsubscript{[4:0]}               & sign-ext \\
-slt      & Set <                      & R     & 0110011    & 0x2        & 0x00                           & rd = (rs1 < rs2)?1:0                                         &          \\
-sltu     & Set < Unsigned             & R     & 0110011    & 0x3        & 0x00                           & rd = (rs1 < rs2)?1:0                                         &          \\ \hline
+slt      & Set <                      & R     & 0110011    & 0x2        &                                & rd = (rs1 < rs2)?1:0                                         &          \\
+sltu     & Set < Unsigned             & R     & 0110011    & 0x3        &                                & rd = (rs1 < rs2)?1:0                                         &          \\ \hline
 addi     & ADD Immediate              & I     & 0010011    & 0x0        &                                & rd = rs1 + imm                                               &          \\
 xori     & XOR Immediate              & I     & 0010011    & 0x4        &                                & rd = rs1 \^{} imm                                            &          \\
 ori      & OR Immediate               & I     & 0010011    & 0x6        &                                & rd = rs1 | imm                                               &          \\
 andi     & AND Immediate              & I     & 0010011    & 0x7        &                                & rd = rs1 \& imm                                              &          \\
-slli     & Shift Left Logical Imm.    & I     & 0010011    & 0x1        & imm\textsubscript{[11:5]}=0x00 & rd = rs1 \verb|<<| imm\textsubscript{[4:0]}                  & zero-ext \\
+slli     & Shift Left Logical Imm.    & I     & 0010011    & 0x1        &                                & rd = rs1 \verb|<<| imm\textsubscript{[4:0]}                  & zero-ext \\
 srli     & Shift Right Logical Imm.   & I     & 0010011    & 0x5        & imm\textsubscript{[11:5]}=0x00 & rd = rs1 \verb|>>| imm\textsubscript{[4:0]}                  & zero-ext \\
 srai     & Shift Right Arith Imm.     & I     & 0010011    & 0x5        & imm\textsubscript{[11:5]}=0x20 & rd = rs1 \verb|>>>| imm\textsubscript{[4:0]}                 & sign-ext \\
 slti     & Set < Imm.                 & I     & 0010011    & 0x2        &                                & rd = (rs1 < imm)?1:0                                         &          \\
